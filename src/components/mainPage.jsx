@@ -19,7 +19,7 @@ function MainPage() {
               textAlign: "center",
             }}
           >
-            Web Vectors by Issara
+            Welcome to REACT Games
           </div>
           <div className="main-landing-heading">
             ROCK <br />
