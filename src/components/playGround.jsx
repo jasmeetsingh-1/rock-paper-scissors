@@ -9,13 +9,53 @@ import handOption from "../assets/choose/choose_hand.svg";
 import scissorsOption from "../assets/choose/choose_scissors.svg";
 
 function PlayGround({ setInPlayGround }) {
+  const values = ["rock", "scissors", "paper"];
+
+  function chooseRandomValue(arr) {
+    const randomIndex = Math.floor(Math.random() * arr.length);
+    return arr[randomIndex];
+  }
   const [optionChoosen, setOptionChoosen] = useState("");
-  const [result, setResult] = useState("");
-  const [score, setScore] = useState(3);
+  const [result, setResult] = useState("lose");
+  const [score, setScore] = useState(0);
+  const [robotOptionChoosen, setRobotOptionChoosen] = useState("");
+
   useEffect(() => {
-    setResult("");
-    setScore(3);
-  }, [setResult, setScore]);
+    const calculateScore = () => {
+      if (optionChoosen === "rock" && robotOptionChoosen === "scissors") {
+        setResult("win");
+        setScore((prev) => prev + 1);
+      } else if (optionChoosen === "paper" && robotOptionChoosen === "rock") {
+        setResult("win");
+        setScore((prev) => prev + 1);
+      } else if (
+        optionChoosen === "scissors" &&
+        robotOptionChoosen === "paper"
+      ) {
+        setResult("win");
+        setScore((prev) => prev + 1);
+      } else if (optionChoosen === "rock" && robotOptionChoosen === "paper") {
+        setResult("lose");
+      } else if (
+        optionChoosen === "paper" &&
+        robotOptionChoosen === "scissors"
+      ) {
+        setResult("lose");
+      } else if (
+        optionChoosen === "scissors" &&
+        robotOptionChoosen === "rock"
+      ) {
+        setResult("lose");
+      } else if (robotOptionChoosen === optionChoosen) {
+        setResult("draw");
+      }
+    };
+    calculateScore();
+  }, [optionChoosen, robotOptionChoosen]);
+
+  const robotPlaying = () => {
+    setRobotOptionChoosen(chooseRandomValue(values));
+  };
   return (
     <div className="playGround-outer-div">
       <div className="score-holder-playGround">
@@ -30,10 +70,18 @@ function PlayGround({ setInPlayGround }) {
         <span>Score: {score} </span>
       </div>
       <img
-        src={hand}
-        alt="hand-svg"
-        width="100px"
+        src={
+          robotOptionChoosen === "rock"
+            ? rock
+            : robotOptionChoosen === "scissors"
+            ? scissors
+            : robotOptionChoosen === "paper"
+            ? hand
+            : hand
+        }
+        alt={robotOptionChoosen}
         style={{ transform: "rotate(180deg)" }}
+        width="100px"
       />
       <div className="playGround-heading">
         {optionChoosen === "" ? (
@@ -41,14 +89,17 @@ function PlayGround({ setInPlayGround }) {
         ) : (
           <div className="play-again-result-playGround">
             <span>
-              {result === "won"
+              {result === "win"
                 ? "You Won!"
                 : result === "lose"
                 ? "You lose!"
-                : "Its a draw"}
+                : result === "draw"
+                ? "Its a draw"
+                : "nothing"}
             </span>
             <button
               onClick={() => {
+                setRobotOptionChoosen("");
                 setOptionChoosen("");
               }}
             >
@@ -66,6 +117,7 @@ function PlayGround({ setInPlayGround }) {
               src={rockOption}
               alt="rock-svg"
               onClick={() => {
+                robotPlaying();
                 setOptionChoosen("rock");
               }}
             />
@@ -73,13 +125,15 @@ function PlayGround({ setInPlayGround }) {
               src={handOption}
               alt="hand-svg"
               onClick={() => {
-                setOptionChoosen("hand");
+                robotPlaying();
+                setOptionChoosen("paper");
               }}
             />
             <img
               src={scissorsOption}
               alt="scissors-svg"
               onClick={() => {
+                robotPlaying();
                 setOptionChoosen("scissors");
               }}
             />
