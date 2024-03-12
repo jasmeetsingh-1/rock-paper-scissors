@@ -1,0 +1,78 @@
+.options-holder-playGround {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.robot-answer-image-holder > img {
+  transform: rotate(180deg);
+  scale: 0.8;
+}
+
+.playGround-outer-div {
+  background-color: #e09feb;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+  min-width: 40%;
+  max-width: 40%;
+  min-height: 95%;
+  max-height: 95%;
+  position: relative;
+}
+
+.playGround-heading {
+  font-size: xxx-large;
+  font-weight: 900;
+}
+
+.option-holder-playGround {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.option-holder-playGround > img {
+  cursor: pointer;
+  scale: 1.5;
+}
+
+.play-again-result-playGround {
+  text-align: center;
+  font-size: 30px !important;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.play-again-result-playGround > button {
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  border: none;
+  font-size: medium;
+  cursor: pointer;
+  background-color: #782587;
+  color: white;
+}
+
+.score-holder-playGround {
+  position: absolute;
+  top: 15px;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.score-holder-playGround > img {
+  cursor: pointer;
+}
+.score-holder-playGround > span {
+  font-weight: 600;
+  font-size: larger;
+}
