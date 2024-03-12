@@ -18,8 +18,8 @@
   justify-content: space-around;
   align-items: center;
   gap: 1rem;
-  min-width: 40%;
-  max-width: 40%;
+  min-width: 27%;
+  max-width: 27%;
   min-height: 95%;
   max-height: 95%;
   position: relative;
@@ -75,4 +75,12 @@
 .score-holder-playGround > span {
   font-weight: 600;
   font-size: larger;
+}
+@media screen and (max-width: 480px) {
+  .playGround-outer-div {
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 100%;
+    min-height: 100%;
+  }
 }
