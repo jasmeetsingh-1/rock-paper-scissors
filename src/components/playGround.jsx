@@ -7,6 +7,8 @@ import scissors from "../assets/scissors.svg";
 import rockOption from "../assets/choose/choose_stone.svg";
 import handOption from "../assets/choose/choose_hand.svg";
 import scissorsOption from "../assets/choose/choose_scissors.svg";
+import Lottie from "lottie-react";
+import wonAnnimation from "../assets/wonAnnimation.json";
 
 function PlayGround({ setInPlayGround }) {
   const values = ["rock", "scissors", "paper"];
@@ -89,13 +91,26 @@ function PlayGround({ setInPlayGround }) {
         ) : (
           <div className="play-again-result-playGround">
             <span>
-              {result === "win"
-                ? "You Won!"
-                : result === "lose"
-                ? "You lose!"
-                : result === "draw"
-                ? "Its a draw"
-                : "nothing"}
+              {result === "win" ? (
+                <div
+                  style={{ display: "flex", flexDirection: "column-reverse" }}
+                >
+                  "You Won!"
+                  <div style={{ maxWidth: "124px" }}>
+                    <Lottie
+                      animationData={wonAnnimation}
+                      loop={true}
+                      autoplay={true}
+                    />
+                  </div>
+                </div>
+              ) : result === "lose" ? (
+                "You lose!"
+              ) : result === "draw" ? (
+                "Its a draw"
+              ) : (
+                "nothing"
+              )}
             </span>
             <button
               onClick={() => {
