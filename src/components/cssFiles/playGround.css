@@ -11,17 +11,8 @@
 }
 
 .playGround-outer-div {
-  background-color: #e09feb;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  gap: 1rem;
-  min-width: 27%;
-  max-width: 27%;
-  min-height: 95%;
-  max-height: 95%;
+  background-color: #e09feb !important;
+  justify-content: space-around !important;
   position: relative;
 }
 

@@ -9,6 +9,7 @@ import handOption from "../assets/choose/choose_hand.svg";
 import scissorsOption from "../assets/choose/choose_scissors.svg";
 import Lottie from "lottie-react";
 import wonAnnimation from "../assets/wonAnnimation.json";
+import Card from "./card";
 
 function PlayGround({ setInPlayGround }) {
   const values = ["rock", "scissors", "paper"];
@@ -59,7 +60,7 @@ function PlayGround({ setInPlayGround }) {
     setRobotOptionChoosen(chooseRandomValue(values));
   };
   return (
-    <div className="playGround-outer-div">
+    <Card className="playGround-outer-div">
       <div className="score-holder-playGround">
         <img
           src={back}
@@ -167,7 +168,7 @@ function PlayGround({ setInPlayGround }) {
           width="100px"
         />
       )}
-    </div>
+    </Card>
   );
 }
 

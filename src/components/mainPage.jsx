@@ -3,6 +3,7 @@ import "./cssFiles/mainPage.css";
 import PlayGround from "./playGround";
 import annimation from "../assets/Animation - 1710259044306.json";
 import Lottie from "lottie-react";
+import Card from "./card";
 
 function MainPage() {
   const [inPlayGround, setInPlayGround] = useState(false);
@@ -11,7 +12,7 @@ function MainPage() {
       {inPlayGround ? (
         <PlayGround setInPlayGround={setInPlayGround} />
       ) : (
-        <div className="main-landing-outer-div">
+        <Card>
           <div
             style={{
               color: "lightgray",
@@ -38,7 +39,7 @@ function MainPage() {
               START
             </button>
           </div>
-        </div>
+        </Card>
       )}
     </>
   );
