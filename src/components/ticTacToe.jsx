@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import "./playGround.css";
+import "./cssFiles/TicTacToe.css";
 import cross from "../assets/cross-svgrepo-com.svg";
 import circle from "../assets/circle-svgrepo-com.svg";
 
