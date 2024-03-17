@@ -1,4 +1,4 @@
-.main-playGroundHolder > div {
+/* .main-playGroundHolder > div {
   width: fit-content;
   cursor: pointer;
 }
@@ -24,4 +24,39 @@
 
 .winner-holder {
   text-align: center;
+}
+ */
+.ticTacToe-card {
+  background-color: #12161f;
+}
+.ticTacToe-grid-inner-div {
+  min-width: 100px;
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  color: white;
+  border: 2px solid #575757;
+  background-color: #57575722;
+}
+
+.firstPlayer-played {
+  background-color: #22557747;
+  border: 2px solid #225577 !important;
+  /* filter: brightness(-20%); */
+}
+
+.secondPlayer-played {
+  background-color: #e456513d;
+  border: 2px solid #e45651 !important;
+}
+
+.ticTacToe-grid-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.ticTacToe-main-outer-div div:nth-child(2) > div {
+  margin: 0.5rem 0;
 }

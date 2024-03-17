@@ -6,7 +6,8 @@ function App() {
   return (
     <div className="app-div-outer roboto-thin">
       {/* <TicTacToe /> */}
-      <MainPage />
+      {/* <MainPage /> */}
+      <TicTacToe />
     </div>
   );
 }
