@@ -18,6 +18,7 @@ function PlayGround({ setInPlayGround }) {
     const randomIndex = Math.floor(Math.random() * arr.length);
     return arr[randomIndex];
   }
+
   const [optionChoosen, setOptionChoosen] = useState("");
   const [result, setResult] = useState("lose");
   const [score, setScore] = useState(0);
