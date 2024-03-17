@@ -81,11 +81,19 @@ function TicTacToe() {
     }
   }, [playerOne, setWinner]);
 
-  useEffect(() => {
-    console.log(playerPlaying);
-  }, [playerPlaying]);
   return (
     <Card className="ticTacToe-card">
+      <div
+        className="ticTacTow-header"
+        style={{
+          color: "white",
+          textAlign: "center",
+          position: "absolute",
+          top: "20%",
+        }}
+      >
+        {winner ? `${winner} won` : ""}
+      </div>
       <div className="ticTacToe-main-outer-div">
         <div className="ticTacToe-grid-row">
           <div

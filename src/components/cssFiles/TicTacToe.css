@@ -28,6 +28,7 @@
  */
 .ticTacToe-card {
   background-color: #12161f;
+  position: relative;
 }
 .ticTacToe-grid-inner-div {
   min-width: 100px;
