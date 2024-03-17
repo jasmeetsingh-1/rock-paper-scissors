@@ -29,6 +29,10 @@
 .ticTacToe-card {
   background-color: #12161f;
   position: relative;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  border-radius: 0;
 }
 .ticTacToe-grid-inner-div {
   min-width: 100px;
