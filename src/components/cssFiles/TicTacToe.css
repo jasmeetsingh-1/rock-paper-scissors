@@ -27,12 +27,12 @@
 }
  */
 .ticTacToe-card {
-  background-color: #12161f;
-  position: relative;
-  min-width: 100%;
-  max-width: 100%;
-  min-height: 100%;
-  border-radius: 0;
+  background-color: #12161f !important;
+  position: relative !important;
+  min-width: 100% !important;
+  max-width: 100% !important;
+  min-height: 100% !important;
+  border-radius: 0 !important;
 }
 .ticTacToe-grid-inner-div {
   min-width: 100px;
