@@ -1,0 +1,40 @@
+.heading-landing-holder {
+  color: white;
+  text-align: center;
+  font-weight: 100;
+  font-size: xxx-large;
+}
+
+.copyright-landing-holder {
+  color: lightgray;
+  font-size: xx-small;
+  text-align: center;
+}
+
+.buttons-holder-landing-holder {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.buttons-holder-landing-holder > button {
+  cursor: pointer;
+}
+
+.buttons-holder-landing-holder > button {
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  font-size: larger;
+  cursor: pointer;
+}
+
+.landing-page-main-holder {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4rem;
+}

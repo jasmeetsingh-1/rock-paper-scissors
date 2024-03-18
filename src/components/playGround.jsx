@@ -63,14 +63,14 @@ function PlayGround({ setInPlayGround }) {
   return (
     <Card className="playGround-outer-div">
       <div className="score-holder-playGround">
-        <img
-          src={back}
-          alt="back-svg"
-          width="20px"
-          onClick={() => {
-            setInPlayGround(false);
-          }}
-        />
+        {/* <img
+        //   src={back}
+        //   alt="back-svg"
+        //   width="20px"
+        //   onClick={() => {
+        //     setInPlayGround(false);
+        //   }}
+        // /> */}
         <span>Score: {score} </span>
       </div>
       <img
