@@ -38,3 +38,22 @@
 .ticTacToe-main-outer-div div:nth-child(2) > div {
   margin: 0.5rem 0;
 }
+
+.ticTacTow-header {
+  color: white;
+  position: absolute;
+  top: 20%;
+}
+
+.reset-button {
+  border: none;
+  padding: 0.3rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: large;
+  margin-top: 1rem;
+}
+
+.reset-button:hover {
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}

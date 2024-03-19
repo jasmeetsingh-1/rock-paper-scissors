@@ -83,17 +83,8 @@ function TicTacToe() {
 
   return (
     <Card className="ticTacToe-card">
-      <div
-        className="ticTacTow-header"
-        style={{
-          color: "white",
-          textAlign: "center",
-          position: "absolute",
-          top: "20%",
-        }}
-      >
-        {winner ? `${winner} won` : ""}
-      </div>
+      <div className="ticTacTow-header">{winner ? `${winner} won` : ""}</div>
+
       <div className="ticTacToe-main-outer-div">
         <div className="ticTacToe-grid-row">
           <div
@@ -282,6 +273,16 @@ function TicTacToe() {
           </div>
         </div>
       </div>
+      <button
+        className="reset-button"
+        onClick={() => {
+          setPlayerOne([]);
+          setPlayerTwo([]);
+          setWinner("");
+        }}
+      >
+        Play Again!
+      </button>
     </Card>
   );
 }
