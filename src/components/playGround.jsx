@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./cssFiles/playGround.css";
-import back from "../assets/back-svgrepo-com.svg";
+// import back from "../assets/back-svgrepo-com.svg";
 import hand from "../assets/hand.svg";
 import rock from "../assets/stone.svg";
 import scissors from "../assets/scissors.svg";
