@@ -11,7 +11,7 @@ import Lottie from "lottie-react";
 import wonAnnimation from "../assets/wonAnnimation.json";
 import Card from "./card";
 
-function PlayGround({ setInPlayGround }) {
+function PlayGround({ setIsPlaying }) {
   const values = ["rock", "scissors", "paper"];
 
   function chooseRandomValue(arr) {
@@ -63,6 +63,14 @@ function PlayGround({ setInPlayGround }) {
   return (
     <Card className="playGround-outer-div">
       <div className="score-holder-playGround">
+        <div
+          className="main-menu-option"
+          onClick={() => {
+            setIsPlaying(false);
+          }}
+        >
+          Go to main menu
+        </div>
         {/* <img
         //   src={back}
         //   alt="back-svg"

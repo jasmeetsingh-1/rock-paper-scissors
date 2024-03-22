@@ -9,7 +9,7 @@ function LandingPage() {
   return (
     <>
       {isPlaying ? (
-        <IsPLaying playingWhat={playingWhat} />
+        <IsPLaying playingWhat={playingWhat} setIsPlaying={setIsPlaying} />
       ) : (
         <div className="landing-page-main-holder">
           <div className="copyright-landing-holder">&#169; Jasmeet Singh</div>

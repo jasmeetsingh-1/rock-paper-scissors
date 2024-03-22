@@ -56,7 +56,7 @@
   position: absolute;
   top: 15px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   width: 35%;
 }
 
@@ -67,6 +67,15 @@
   font-weight: 600;
   font-size: larger;
 }
+
+.main-menu-option {
+  font-size: x-small;
+  text-decoration: underline;
+  color: blue;
+  font-weight: 700;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 480px) {
   .playGround-outer-div {
     max-width: 100%;

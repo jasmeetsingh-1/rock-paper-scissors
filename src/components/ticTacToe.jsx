@@ -6,7 +6,7 @@ import cross from "../assets/cross-svgrepo-com.svg";
 import circle from "../assets/circle-svgrepo-com.svg";
 import Card from "../components/card";
 
-function TicTacToe() {
+function TicTacToe({ setIsPlaying }) {
   const [playerPlaying, setplayerPlaying] = useState(true); //if true --> first player, false --> second Player
   const [playerOne, setPlayerOne] = useState([]);
   const [playerTwo, setPlayerTwo] = useState([]);
@@ -83,6 +83,15 @@ function TicTacToe() {
 
   return (
     <Card className="ticTacToe-card">
+      <div
+        style={{ position: "absolute", top: "40px" }}
+        className="main-menu-option"
+        onClick={() => {
+          setIsPlaying(false);
+        }}
+      >
+        Go to main menu
+      </div>
       <div className="ticTacTow-header">{winner ? `${winner} won` : ""}</div>
 
       <div className="ticTacToe-main-outer-div">
