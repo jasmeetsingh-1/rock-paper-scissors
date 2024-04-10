@@ -8,6 +8,10 @@ import Card from "../components/card";
 import NamesModal from "./ticTacToeNamesModal";
 
 function TicTacToe({ setIsPlaying }) {
+  const [namePlayers, setNamePlayers] = useState({
+    firstPlayer: "",
+    secondPlayer: "",
+  });
   const [playerPlaying, setplayerPlaying] = useState(true); //if true --> first player, false --> second Player
   const [playerOne, setPlayerOne] = useState([]);
   const [playerTwo, setPlayerTwo] = useState([]);
@@ -81,6 +85,10 @@ function TicTacToe({ setIsPlaying }) {
       setWinner("Player one");
     }
   }, [playerOne, setWinner]);
+
+  useEffect(() => {
+    console.log({ namePlayers });
+  }, [namePlayers]);
 
   return (
     <Card className="ticTacToe-card">
@@ -293,7 +301,7 @@ function TicTacToe({ setIsPlaying }) {
       >
         Play Again!
       </button>
-      <NamesModal />
+      <NamesModal setNamePlayers={setNamePlayers} />
     </Card>
   );
 }
