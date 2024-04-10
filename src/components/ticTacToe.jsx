@@ -5,6 +5,7 @@ import "./cssFiles/TicTacToe.css";
 import cross from "../assets/cross-svgrepo-com.svg";
 import circle from "../assets/circle-svgrepo-com.svg";
 import Card from "../components/card";
+import NamesModal from "./ticTacToeNamesModal";
 
 function TicTacToe({ setIsPlaying }) {
   const [playerPlaying, setplayerPlaying] = useState(true); //if true --> first player, false --> second Player
@@ -292,6 +293,7 @@ function TicTacToe({ setIsPlaying }) {
       >
         Play Again!
       </button>
+      <NamesModal />
     </Card>
   );
 }

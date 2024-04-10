@@ -8,7 +8,7 @@
 
 body {
   font-family: Roboto;
-  background-color: #12161f;
+  background-color: #12161f !important;
 }
 
 .roboto-thin {
