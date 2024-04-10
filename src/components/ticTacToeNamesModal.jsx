@@ -35,6 +35,7 @@ function NamesModal({ setNamePlayers }) {
       firstPlayer: players.firstPlayer,
       secondPlayer: players.secondPlayer,
     });
+    setShowing(false);
   };
   return (
     <Modal
@@ -71,6 +72,7 @@ function NamesModal({ setNamePlayers }) {
                   !/^[0-9]+$/.test(value.charAt(value.length - 1)) &&
                   !/[^a-zA-Z0-9\s]/.test(value)
                 ) {
+                  setnameErrors({ ...nameError, firstPlayer: false });
                   setPlayers({ ...players, firstPlayer: value });
                 }
               }}
@@ -91,6 +93,7 @@ function NamesModal({ setNamePlayers }) {
                   !/^[0-9]+$/.test(value.charAt(value.length - 1)) &&
                   !/[^a-zA-Z0-9\s]/.test(value)
                 ) {
+                  setnameErrors({ ...nameError, secondPlayer: false });
                   setPlayers({ ...players, secondPlayer: value });
                 }
               }}

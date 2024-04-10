@@ -66,7 +66,7 @@ function TicTacToe({ setIsPlaying }) {
     ];
 
     if (checkingForWin(winingCases, playerTwo)) {
-      setWinner("Player Two");
+      setWinner(namePlayers.secondPlayer);
     }
   }, [playerTwo, setWinner]);
   useEffect(() => {
@@ -82,7 +82,7 @@ function TicTacToe({ setIsPlaying }) {
     ];
 
     if (checkingForWin(winingCases, playerOne)) {
-      setWinner("Player one");
+      setWinner(namePlayers.firstPlayer);
     }
   }, [playerOne, setWinner]);
 

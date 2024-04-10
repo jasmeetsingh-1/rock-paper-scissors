@@ -47,12 +47,13 @@
   border-radius: 10px;
   padding: 12px 10px;
   font-weight: 700;
-  /* border: 1px solid grey; */
+  border: 0.5px solid lightgrey;
 }
 
 .names-form-buttons-holder button:nth-child(1) {
   background-color: #12161fe9;
   color: white;
+  border: none;
 }
 
 @media screen and (max-width: 800px) {
