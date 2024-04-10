@@ -68,7 +68,7 @@ function TicTacToe({ setIsPlaying }) {
     if (checkingForWin(winingCases, playerTwo)) {
       setWinner(namePlayers.secondPlayer);
     }
-  }, [playerTwo, setWinner]);
+  }, [playerTwo, setWinner, namePlayers.secondPlayer]);
   useEffect(() => {
     let winingCases = [
       [1, 2, 3],
@@ -84,11 +84,7 @@ function TicTacToe({ setIsPlaying }) {
     if (checkingForWin(winingCases, playerOne)) {
       setWinner(namePlayers.firstPlayer);
     }
-  }, [playerOne, setWinner]);
-
-  useEffect(() => {
-    console.log({ namePlayers });
-  }, [namePlayers]);
+  }, [playerOne, setWinner, namePlayers.firstPlayer]);
 
   return (
     <Card className="ticTacToe-card">
