@@ -20,13 +20,18 @@
 
 .names-form-holder {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .names-form-row {
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
+}
+.names-form-row > label{
+  display: flex;
+  gap:5px;
+  align-items: center;
 }
 
 .names-form-row > input {
@@ -54,6 +59,20 @@
   background-color: #12161fe9;
   color: white;
   border: none;
+}
+
+.circle-namesModal{
+  background-color: #e456513d;
+  border: 1px solid #e45651 !important;
+  padding: 2px;
+  border-radius: 100%;
+}
+
+.cross-namesModal{
+  background-color: #22557747;
+  border: 1px solid #225577 !important;
+  padding: 2px;
+  border-radius: 100%;
 }
 
 @media screen and (max-width: 800px) {

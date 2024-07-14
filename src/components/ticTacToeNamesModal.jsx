@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Modal } from "react-bootstrap";
 import "./cssFiles/ticTacToeNamesModal.css";
+import circle from "../assets/circle-svgrepo-com.svg";
+import cross from "../assets/cross-svgrepo-com.svg";
 
 function NamesModal({ setNamePlayers }) {
   const [showing, setShowing] = useState(true);
@@ -58,7 +60,10 @@ function NamesModal({ setNamePlayers }) {
           className="row names-form-holder"
         >
           <div className="col names-form-row">
-            <label htmlFor="firstPlayer">First Player</label>
+            <label htmlFor="firstPlayer">
+              First Player
+              <div><img src={cross} className="cross-namesModal" alt="cross" width="20px"/></div>
+            </label>
             <input
               style={{ border: nameError.firstPlayer ? "1px solid red" : "" }}
               type="text"
@@ -79,7 +84,10 @@ function NamesModal({ setNamePlayers }) {
             />
           </div>
           <div className="col names-form-row">
-            <label htmlFor="secondPlayer">Second Player</label>
+            <label htmlFor="secondPlayer">
+              Second Player
+              <div><img src={circle} className="circle-namesModal" alt="circle" width="20px"/></div>
+            </label>
             <input
               style={{ border: nameError.secondPlayer ? "1px solid red" : "" }}
               type="text"
