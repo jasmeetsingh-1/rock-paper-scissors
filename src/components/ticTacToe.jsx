@@ -86,6 +86,14 @@ function TicTacToe({ setIsPlaying }) {
     }
   }, [playerOne, setWinner, namePlayers.firstPlayer]);
 
+  const resetValues = ()=>{
+    setPlayerOne([]);
+    setPlayerTwo([]);
+    setWinner("");
+    setplayerPlaying(true);
+  }
+
+
   return (
     <Card className="ticTacToe-card">
       <div
@@ -97,7 +105,15 @@ function TicTacToe({ setIsPlaying }) {
       >
         Go to main menu
       </div>
-      <div className="ticTacTow-header">{winner ? `${winner} won` : ""}</div>
+      {winner ? (
+        <div className="ticTacTow-header">{`${winner} won`}</div>
+      ) : (
+        <div className="ticTacTow-header">
+          {
+            playerPlaying ? `${namePlayers.firstPlayer}'s turn` : `${namePlayers.secondPlayer}'s turn`
+          }
+        </div>
+      )}
 
       <div className="ticTacToe-main-outer-div">
         <div className="ticTacToe-grid-row">
@@ -289,11 +305,7 @@ function TicTacToe({ setIsPlaying }) {
       </div>
       <button
         className="reset-button"
-        onClick={() => {
-          setPlayerOne([]);
-          setPlayerTwo([]);
-          setWinner("");
-        }}
+        onClick={resetValues}
       >
         Play Again!
       </button>
