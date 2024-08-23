@@ -1,0 +1,5 @@
+Allow number in player name 
+Show who’s turn 
+User can choose the symbol
+    first we can simply show the symbol for the first and the second
+    give option to change where user want to 
